@@ -10,12 +10,9 @@ class UploadProperty extends Component {
     {
         return(
             <Fragment>
-            <p align="center">
-            <button>Click to upload new property</button>
-            </p>
+           
             </Fragment>
         )
-
     }
 }
 export default UploadProperty;
