@@ -19,7 +19,7 @@ class PropertyDetails extends Component {
   {
     e.preventDefault();
     console.log('Get Detail')
-    var res = await myContract.methods.propertyDetail(102).call()
+    var res = await myContract.methods.propertyDetail(2001).call()
     // Get All Accounts info 
     this.setState({details:res})
   }
@@ -64,9 +64,13 @@ class PropertyDetails extends Component {
           <td> 
             {this.state.details.propAddress}
           </td>
+          </tr>
+          <tr>
+          <td>Previous Owner:</td>
           <td> 
             {this.state.details.Pre_owners}
           </td>
+
           </tr>          
       </table>       
   </div>
