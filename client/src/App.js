@@ -1,27 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Web3 from 'web3';
 import PropertyTransfer from './PropertyTransfer.json'
-import {
-  Route,
-} from "react-router-dom";
-
-class App extends Component {
-  async componentDidMount() {
-    const web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"))
-    const myContract = await new web3.eth.Contract(PropertyTransfer.abi,PropertyTransfer.networks[5777].address);
-    console.log(myContract.methods);
-  }
-  constructor()
-  {
-    super()
-
-    
-  }
+import Header  from './components/Header';
+import Footer from './components/Footer';
+import PropertyDetail from './components/PropertyDetail';
+import UploadProperty from './components/UploadProperty';
+class App extends Component {  
   render(){
   return (
-    <div>
-   
-    </div>
+    <Fragment>
+      <Header/>
+      <UploadProperty/>
+      <PropertyDetail/>
+      <Footer/>
+    </Fragment>
   );
   }
 }
